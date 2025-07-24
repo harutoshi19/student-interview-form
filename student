@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>学生面談シート</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #2e86de;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2163b1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>学生面談シート</h1>
+        <form>
+            <label for="name">氏名</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="university">大学名・学部・学科</label>
+            <input type="text" id="university" name="university" required>
+
+            <label for="grade">学年</label>
+            <input type="text" id="grade" name="grade" required>
+
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>面談の目的（該当するものに✔）</label>
+            <label><input type="checkbox" name="purpose" value="企業理解">企業理解を深めたい</label>
+            <label><input type="checkbox" name="purpose" value="模擬面接">模擬面接をしたい</label>
+            <label><input type="checkbox" name="purpose" value="志望度を上げたい">志望度を上げたい</label>
+            <label><input type="checkbox" name="purpose" value="その他">その他</label>
+
+            <label for="questions">人事に聞きたいこと</label>
+            <textarea id="questions" name="questions"></textarea>
+
+            <label for="ideal">面談後の理想・期待</label>
+            <textarea id="ideal" name="ideal"></textarea>
+
+            <label for="notes">その他（任意）</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <button type="submit">送信</button>
+        </form>
+    </div>
+</body>
+</html>
